@@ -1,0 +1,17 @@
+//cea mai ciudata cerinta
+#include <iostream>
+#include <vector>
+int* sumaMinMax(int a[],int n)
+{
+    int sum=0,mini=9999999,maxi=-1;
+    for(int i=0;i<n;i++)
+    {
+        sum+=a[i];
+        mini=std::min(mini,a[i]);
+        maxi=std::max(maxi,a[i]);
+    }
+    int*b=new int[2];
+    b[0]=sum-maxi;
+    b[1]=sum-mini;
+    return b;
+}
